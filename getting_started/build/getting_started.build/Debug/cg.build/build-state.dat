@@ -1,0 +1,322 @@
+Tcg
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/Info.plist cg-Info.plist
+cCpResource textures build/Debug/cg.app/Contents/Resources/textures
+cCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cg normal i386
+cTouch /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app
+
+N/Library/Frameworks/GLUI.framework/GLUI
+c0000000049502B89000000000016D590
+t1229990793
+s1496464
+
+N/System/Library/Frameworks/GLUT.framework/GLUT
+c00000000512934DE0000000000105760
+t1361655006
+s1070944
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c0000000051293512000000000002D360
+t1361655058
+s185184
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/Color.h
+c00000000506A17A60000000000001498
+t1349130150
+s5272
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h
+c0000000046D1D06C0000000000016E07
+t1188155500
+s93703
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app
+t1415359438
+s102
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Info.plist
+t1411344148
+s1177
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/MacOS/cg
+t1415359438
+s65840
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/PkgInfo
+t1411344148
+s8
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Resources/textures
+t1411344148
+s136
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/cg.LinkFileList
+c00000000541F67140000000000000124
+t1411344148
+s292
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o
+t1415359438
+s168452
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o
+t1411344150
+s43028
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp
+c00000000545CABCD0000000000004C4D
+t1415359437
+s19533
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.h
+c00000000545CABE40000000000002AB2
+t1415359460
+s10930
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp
+c00000000506865980000000000002120
+t1349019032
+s8480
+i<stdio.h>
+i<stdlib.h>
+i<string>
+i<iostream>
+i"texture.h"
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.h
+c00000000506B7EE6000000000000029D
+t1349222118
+s669
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/textures
+c00000000506C90BC00000000000000AA
+t1349292220
+s170
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/Color.h
+c00000000506A17A60000000000001498
+t1349130150
+s5272
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h
+c0000000046D1D06C0000000000016E07
+t1188155500
+s93703
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app
+t1415380951
+s102
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/Info.plist
+t1411344148
+s1177
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cg
+t1415380951
+s61292
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/PkgInfo
+t1411344148
+s8
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/Resources/textures
+t1411344148
+s136
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/cg.LinkFileList
+c00000000545CFE050000000000000124
+t1415380485
+s292
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o
+t1415380951
+s161608
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o
+t1411344150
+s43028
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp
+c00000000545CFFDE0000000000004BF7
+t1415380958
+s19447
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.h
+c00000000545CABE40000000000002AB2
+t1415359460
+s10930
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/texture.cpp
+c00000000506865980000000000002120
+t1349019032
+s8480
+i<stdio.h>
+i<stdlib.h>
+i<string>
+i<iostream>
+i"texture.h"
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/texture.h
+c00000000506B7EE6000000000000029D
+t1349222118
+s669
+
+N/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/textures
+c00000000506C90BC00000000000000AA
+t1349292220
+s170
+
+N/usr/include/stdio.h
+c000000004F4454C40000000000004763
+t1329878212
+s18275
+
+N/usr/include/stdlib.h
+c000000004F4454C400000000000030A7
+t1329878212
+s12455
+
+Ncg-Info.plist
+c00000000506677F0000000000000032A
+t1348892656
+s810
+
+CBuild AST from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp
+r0
+
+CBuild AST from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp
+r0
+
+CBuild AST from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp
+r0
+
+CBuild AST from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/texture.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies9a08ef5f370dba41^09c0ef5f370dba41^---0#1#0#--18"Check dependencies36"5097FDA6-F8D4-4E31-9512-606F4BA7ED3A-
+
+CCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s437052261.133963
+e437052261.630233
+r1
+xCompileC
+xbuild/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp:1:
+oIn file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.h:7:
+o/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h:932:24: warning: equality comparison result unused [-Wunused-comparison]
+o        last_live_text == "";
+o        ~~~~~~~~~~~~~~~^~~~~
+o/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h:932:24: note: use '=' to turn this equality comparison into an assignment
+o        last_live_text == "";
+o                       ^~
+o                       =
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp236a2265e30cba41^0d55a165e30cba41^-692"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp:1:In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.h:7:/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h:932:24: warning: equality comparison result unused [-Wunused-comparison]        last_live_text == "";        ~~~~~~~~~~~~~~~^~~~~/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h:932:24: note: use '=' to turn this equality comparison into an assignment        last_live_text == "";                       ^~                       =1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@33"Equality comparison result unused-437052261#18446744073709551615#0#3(2@110"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp:1:-437052261#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@101"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@108"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.h:7:-437052261#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@99"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.h0000000000000000^6#9#6#9#125#0#21"Clang LLVM 1.0 Notice--2@59"Use '=' to turn this equality comparison into an assignment-437052261#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h0000000000000000^931#23#931#23#34263#0#14"Semantic Issue1(3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h0000000000000000^931#23#931#25#34263#2#-1#27"com.apple.dt.IDE.diagnostic3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h0000000000000000^931#23#931#23#34263#0#19"Unused Entity Issue1(3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/GL/glui.h0000000000000000^931#8#931#28#34248#18#-0#0#0#-19%DVTDocumentLocation4@101"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp0000000000000000^2555"CompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o sampleGUI.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/cg.hmap -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources/i386 -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources -F/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug -MMD -MT dependencies -MF /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.d --serialize-diagnostics /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.dia -c /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/sampleGUI.cpp -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o36"3626FE72-13F7-48ED-A693-16040C91CD16-
+
+CCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s437073759.955243
+e437073760.634444
+r1
+xCompileC
+xbuild/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp:1:
+oIn file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.h:7:
+o/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h:932:24: warning: equality comparison result unused [-Wunused-comparison]
+o        last_live_text == "";
+o        ~~~~~~~~~~~~~~~^~~~~
+o/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h:932:24: note: use '=' to turn this equality comparison into an assignment
+o        last_live_text == "";
+o                       ^~
+o                       =
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cppd1b0f45f370dba41^7b69a260370dba41^-692"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp:1:In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.h:7:/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h:932:24: warning: equality comparison result unused [-Wunused-comparison]        last_live_text == "";        ~~~~~~~~~~~~~~~^~~~~/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h:932:24: note: use '=' to turn this equality comparison into an assignment        last_live_text == "";                       ^~                       =1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@33"Equality comparison result unused-437073760#18446744073709551615#0#3(2@110"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp:1:-437073760#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@101"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@108"In file included from /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.h:7:-437073760#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@99"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.h0000000000000000^6#9#6#9#125#0#21"Clang LLVM 1.0 Notice--2@59"Use '=' to turn this equality comparison into an assignment-437073760#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h0000000000000000^931#23#931#23#34263#0#14"Semantic Issue1(3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h0000000000000000^931#23#931#25#34263#2#-1#27"com.apple.dt.IDE.diagnostic3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h0000000000000000^931#23#931#23#34263#0#19"Unused Entity Issue1(3@97"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/GL/glui.h0000000000000000^931#8#931#28#34248#18#-0#0#0#-19%DVTDocumentLocation4@101"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp0000000000000000^2555"CompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o sampleGUI.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/cg.hmap -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources/i386 -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources -F/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug -MMD -MT dependencies -MF /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.d --serialize-diagnostics /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.dia -c /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/sampleGUI.cpp -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/sampleGUI.o36"1E81AEBB-C717-4D73-86AF-B2BD6CC3C6D4-
+
+CCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s433036948.821800
+e433036950.061757
+r1
+xCompileC
+xbuild/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp8998d2949ecfb941^85ce0f969ecfb941^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp0000000000000000^2543"CompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/cg.hmap -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources/i386 -I/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/DerivedSources -F/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug -MMD -MT dependencies -MF /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.d --serialize-diagnostics /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.dia -c /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/texture.cpp -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o36"84CC9688-E477-44E6-A259-2FEFB89F070E-
+
+CCompileC build/getting_started.build/Debug/cg.build/Objects-normal/i386/texture.o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCpResource textures build/Debug/cg.app/Contents/Resources/textures
+s433036948.797136
+e433036948.813973
+r1
+xCpResource
+xtextures
+xbuild/Debug/cg.app/Contents/Resources/textures
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/Debug/cg.app/Contents/Resources/textures6c21cc949ecfb941^6361d0949ecfb941^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Resources/textures000000000080d041^449"CpResource textures build/Debug/cg.app/Contents/Resources/textures    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/textures /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Resources36"149D7734-06D1-45E9-B27D-0A95DDFE65DE-
+
+CLd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/MacOS/cg normal i386
+s437052261.637026
+e437052261.692322
+r1
+xLd
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/MacOS/cg
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Link /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/MacOS/cgdd27a365e30cba41^473cb165e30cba41^---0#0#0#--776"Ld build/Debug/cg.app/Contents/MacOS/cg normal i386    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -L/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug -F/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug -filelist /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/cg.LinkFileList -framework Foundation -framework AppKit -framework GLUI -framework OpenGL -framework GLUT -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/MacOS/cg36"595314C5-3427-42BC-ABA9-41E5583B7B07-
+
+CLd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cg normal i386
+s437073760.640843
+e437073760.695204
+r1
+xLd
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cg
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Link /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cgdd22a460370dba41^48f9b160370dba41^---0#0#0#--776"Ld build/Debug/cg.app/Contents/MacOS/cg normal i386    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -L/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug -F/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug -filelist /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/getting_started.build/Debug/cg.build/Objects-normal/i386/cg.LinkFileList -framework Foundation -framework AppKit -framework GLUI -framework OpenGL -framework GLUT -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/MacOS/cg36"D95CA5CF-0AF6-413D-A457-2ADCAD798F10-
+
+CProcessInfoPlistFile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Info.plist cg-Info.plist
+s433036948.785782
+e433036948.789424
+r1
+xProcessInfoPlistFile
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Info.plist
+xcg-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection21"Process cg-Info.plist5f42c9949ecfb941^8f36ca949ecfb941^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/cg-Info.plist0000000000000000^468"ProcessInfoPlistFile build/Debug/cg.app/Contents/Info.plist cg-Info.plist    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    builtin-infoPlistUtility cg-Info.plist -genpkginfo /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app/Contents/Info.plist36"87E233DB-0970-4E4F-B6B0-7ACE9525BCF5-
+
+CProcessInfoPlistFile /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app/Contents/Info.plist cg-Info.plist
+r0
+
+CTouch /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app
+s437052261.700269
+e437052261.705913
+r1
+xTouch
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.appac55b365e30cba41^80b7b465e30cba41^---0#0#0#--217"Touch build/Debug/cg.app    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started    /usr/bin/touch -c /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment1/getting_started/build/Debug/cg.app36"259AEA1D-FD7A-4302-9D49-018BB8E22649-
+
+CTouch /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app
+s437073760.703246
+e437073760.707873
+r1
+xTouch
+x/Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.appd718b460370dba41^4738b560370dba41^---0#0#0#--217"Touch build/Debug/cg.app    cd /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started    /usr/bin/touch -c /Users/atulrungta/Desktop/UNC_Stuff/COMP768/Assignment3/getting_started/build/Debug/cg.app36"E79D21BD-C373-484B-85DD-54215380E841-
+
