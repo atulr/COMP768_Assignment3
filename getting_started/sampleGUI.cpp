@@ -27,32 +27,39 @@ void myGlutDisplay(	void )
 
 }
 
-void matrixVec(float **rotationMatrix, float *vec){
-    vec[0] = rotationMatrix[0][0] * vec[0] + rotationMatrix[0][1] * vec[1];
-    vec[1] = rotationMatrix[1][0] * vec[0] + rotationMatrix[1][1] * vec[1];
-    vec[2] = 0.0;
+void updateNDot() {
+    
+    myVec3 temp;
+    
+    temp = xDot.sub(x.scalarMultiply(x.dot(xDot)/x.dot(x)));
+    
+    NDot.vec[0] = temp.vec[0]/x.mod();
+    NDot.vec[1] = temp.vec[1]/x.mod();
+    NDot.vec[2] = temp.vec[2]/x.mod();
     
 }
 
+void updateN() {
+    
+    N.vec[0] = x.vec[0]/x.mod();
+    N.vec[1] = x.vec[1]/x.mod();
+    N.vec[2] = x.vec[2]/x.mod();
+   
+}
+
+void updateLambda() {
+    lambda = -mass * (NDot.dot(xDot)/N.dot(N)) - (N.dot(f)/(N.dot(N)));
+}
+
 void euler() {
-    vec[0] = vec[0] + vel[0] * dt;
-    vec[1] = vec[1] + vel[1] * dt;
-    vec[2] = vec[2] + vel[2] * dt;
-    
-    
-    vel[0] = vel[0] + dt * ( - dragCoeff * vel[0]/mass);
-    vel[1] = vel[1] + dt * ( - g - dragCoeff * vel[1]/mass );
-    vel[2] = vel[2] + dt * ( - dragCoeff * vel[2]/mass);
-    
-//    printf(" %f \n", vel[0]);
-//    printf(" %f \n", vel[1]);
-//    printf(" %f \n", vel[2]);
-    
-    
-//    printf(" %f \n", vec[0]);
-//    printf(" %f \n", vec[1]);
-//    printf(" %f \n", vec[2]);
-    
+
+    xDot = xDot.add( f.add(N.scalarMultiply(lambda)).scalarMultiply(dt/mass) );
+
+    x = x.add( xDot.scalarMultiply(dt) );
+
+    updateN();
+    updateNDot();
+    updateLambda();
 }
 
 void rK4() {
@@ -115,19 +122,6 @@ void rK4() {
     
 }
 
-void assignRotationMatrixX(float phi) {
-    rotMatrixX[0][0] = 1.f; rotMatrixX[0][1] = 0.f; rotMatrixX[0][2] = 0.f;
-    rotMatrixX[1][0] = 0.f; rotMatrixX[1][1] = cos(phi * PI / 180.0); rotMatrixX[1][2] = -sin(phi * PI/180.0);
-    rotMatrixX[2][0] = 0.f; rotMatrixX[2][1] = sin(phi * PI / 180.0); rotMatrixX[2][2] = cos(phi * PI / 180.0);
-    
-}
-
-void assignRotationMatrixY(float theta) {
-    rotMatrixY[0][0] = cos(theta * PI / 180.0); rotMatrixY[0][1] = 0.f; rotMatrixY[0][2] = sin(theta * PI / 180.0);
-    rotMatrixY[1][0] = 0.f; rotMatrixY[1][1] = 1.f; rotMatrixY[1][2] = 0.f;
-    rotMatrixY[2][0] = -sin(theta * PI / 180.0); rotMatrixY[2][1] = 0.f; rotMatrixY[2][2] = cos(theta * PI / 180.0);
-    
-}
 
 void normalizeVec() {
     float mag = sqrt(vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2]);
@@ -187,7 +181,6 @@ void drawScene(){
         glVertex3f(0, 0, 1000);
     glEnd();
     
-   
     
 	if (live_draw_object)
 	{
@@ -229,7 +222,7 @@ void drawScene(){
 		{
             case 0:
                 glColor3f(1.0, 1.0, 1.0);
-                glutSolidTorus(0.1f, 2.0f, 300, 300);
+                glutSolidTorus(0.1f, r, 300, 300);
 //                gluCylinder(gluNewQuadric(), 0.5, 0.5, 5.0, 100, 100);
 //                glutSolidCube(2);
                 break;
@@ -244,8 +237,15 @@ void drawScene(){
 		glPopMatrix();
         
         if(enableIntegration)
-            rK4();
+            euler();
         
+        glPushMatrix();
+        glColor3f(1.0, 1.0, 0.0);
+        glTranslatef(x.vec[0], x.vec[1], x.vec[2]);
+        
+        glutSolidSphere(.5, 30, 30);
+        
+        glPopMatrix();
 	}
 }
 
@@ -694,15 +694,16 @@ int main(int argc,	char* argv[])
     rotMatrixY = (float**) malloc(3 * sizeof(float*));
     vec = (float*) malloc(3 * sizeof(float));
     
-    vec[0] = 0.0;
-    vec[1] = 0.0;
-    vec[2] = -1.0;
+    x.vec[0] = 5.f;
+    x.vec[1] = 0.f;
+    x.vec[2] = 0.f;
     
-    for(int i = 0; i < 3; i++) {
-        rotMatrixX[i] = (float* ) malloc(3 * sizeof(float));
-        rotMatrixY[i] = (float* ) malloc(3 * sizeof(float));
-    }
-        
+    xDot.vec[0] = 0.f;
+    xDot.vec[1] = 0.f;
+    xDot.vec[2] = 0.f;
+    
+    updateN();
+    updateNDot();
     
     
 	main_window = glutCreateWindow("Sample Interface");

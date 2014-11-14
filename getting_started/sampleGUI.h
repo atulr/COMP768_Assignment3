@@ -9,7 +9,7 @@
 #include <math.h>
 #include <iostream>
 #include <string>
-
+#include "myVec3.h"
 
 
 
@@ -36,7 +36,7 @@ float eye[3];
 float lookat[3];
 float projectilePos[3];
 float dt = 0.01;
-float mass = 2.f;
+float mass = 1.f;
 float powderMass = 0.1f;
 float theta, phi;
 float **rotMatrixX;
@@ -46,6 +46,12 @@ float vel[3];
 float dragCoeff = 5.f;
 float powderForce = 10000;
 float g = 9.81f;
+float r = 5.0f;
+float lambda;
+
+myVec3 f(0.f, -mass * g, 0.f);
+
+myVec3 x, N, NDot, xDot;
 
 // more textures
 GLuint fboId;

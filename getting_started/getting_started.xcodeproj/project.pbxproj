@@ -13,6 +13,7 @@
 		6EC62720106719BB0003710F /* GLUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6271F106719BB0003710F /* GLUI.framework */; };
 		6EC6272410671A7D0003710F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6272310671A7D0003710F /* OpenGL.framework */; };
 		6EC6272810671A890003710F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6272710671A890003710F /* GLUT.framework */; };
+		EE2F400E1A145F780047E6C2 /* myVec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE2F400D1A145F780047E6C2 /* myVec3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		6EC6272D10671AE40003710F /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		6EC6272E10671AE40003710F /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
 		6EC6272F10671AE40003710F /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
+		EE2F400C1A13D7060047E6C2 /* myVec3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myVec3.h; sourceTree = "<group>"; };
+		EE2F400D1A145F780047E6C2 /* myVec3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = myVec3.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,8 @@
 		6EC627041067192F0003710F = {
 			isa = PBXGroup;
 			children = (
+				EE2F400D1A145F780047E6C2 /* myVec3.cpp */,
+				EE2F400C1A13D7060047E6C2 /* myVec3.h */,
 				6E2D3335161A10030066453F /* sampleGUI.cpp */,
 				6E2D3336161A10030066453F /* sampleGUI.h */,
 				6E2D32DA161666E20066453F /* Color.h */,
@@ -131,6 +136,7 @@
 			files = (
 				6E2D32F41616B28C0066453F /* texture.cpp in Sources */,
 				6E2D3337161A10030066453F /* sampleGUI.cpp in Sources */,
+				EE2F400E1A145F780047E6C2 /* myVec3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
