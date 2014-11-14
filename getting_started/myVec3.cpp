@@ -23,6 +23,15 @@ myVec3 myVec3::add(myVec3 otherVec) {
     return temp;
 }
 
+void myVec3::normalize() {
+    
+    float mag = mod();
+    vec[0]/=mag;
+    vec[1]/=mag;
+    vec[2]/=mag;
+
+}
+
 myVec3 myVec3::sub(myVec3 otherVec) {
     myVec3 temp;
     

@@ -28,6 +28,8 @@ public:
     
     myVec3 scalarMultiply(float scalar);
     
+    void normalize();
+    
     float mod();
     
 };

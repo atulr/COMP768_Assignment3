@@ -48,10 +48,13 @@ float powderForce = 10000;
 float g = 9.81f;
 float r = 5.0f;
 float lambda;
+float extForceScaling = 1.f;
+GLdouble ox=0.0,oy=0.0,oz=0.0;
+float alpha = 0.1f, beta = 0.1f;
 
 myVec3 f(0.f, -mass * g, 0.f);
 
-myVec3 x, N, NDot, xDot;
+myVec3 x, N, NDot, xDot, fExt;
 
 // more textures
 GLuint fboId;

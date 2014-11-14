@@ -51,6 +51,18 @@ void updateLambda() {
     lambda = -mass * (NDot.dot(xDot)/N.dot(N)) - (N.dot(f)/(N.dot(N)));
 }
 
+void updateLambdaFeedback() {
+    float C, CDot, nDotxDot, nDotN, nDotF;
+    C = x.mod() - r;
+    C = alpha * C;
+    CDot = N.dot(xDot) * beta;
+    nDotxDot = NDot.dot(xDot);
+    nDotN = N.dot(N);
+    nDotF = N.dot(f.add(fExt));
+    
+    lambda = -(mass/nDotN) * (C + CDot + nDotxDot) - nDotF/nDotN;
+}
+
 void euler() {
 
     xDot = xDot.add( f.add(N.scalarMultiply(lambda)).scalarMultiply(dt/mass) );
@@ -60,6 +72,18 @@ void euler() {
     updateN();
     updateNDot();
     updateLambda();
+}
+
+void eulerFeedback() {
+    xDot = xDot.add( f.add(fExt).add(N.scalarMultiply(lambda)).scalarMultiply(dt/mass) );
+    
+    x = x.add( xDot.scalarMultiply(dt) );
+    
+    updateN();
+    updateNDot();
+    updateLambdaFeedback();
+
+    
 }
 
 void rK4() {
@@ -236,8 +260,11 @@ void drawScene(){
         
 		glPopMatrix();
         
+//        if(enableIntegration)
+//            euler();
+
         if(enableIntegration)
-            euler();
+            eulerFeedback();
         
         glPushMatrix();
         glColor3f(1.0, 1.0, 0.0);
@@ -366,42 +393,65 @@ void myGlutMouse(int button, int state, int x, int y)
 
 
 // catch mouse move events
-void myGlutMotion(int x, int y)
+void myGlutMotion(int xC, int yC)
 {
 	// the change in mouse position
-	int dx = x-last_x;
-	int dy = y-last_y;
+	int dx = xC-last_x;
+	int dy = yC-last_y;
+    
+    GLint viewport[4];
+    GLdouble modelview[16],projection[16];
+    GLfloat wx=xC,wy,wz;
 
 	float scale, len, theta;
 	float neye[3], neye2[3];
 	float f[3], r[3], u[3];
+    float dist, scaling;
 
 	switch(cur_button)
 	{
 	case GLUT_LEFT_BUTTON:
-		// translate
-		f[0] = lookat[0] - eye[0];
-		f[1] = lookat[1] - eye[1];
-		f[2] = lookat[2] - eye[2];
-		u[0] = 0;
-		u[1] = 1;
-		u[2] = 0;
-
-		// scale the change by how far away we are
-		scale = sqrt(length(f)) * 0.007;
-
-		crossproduct(f, u, r);
-		crossproduct(r, f, u);
-		normalize(r);
-		normalize(u);
-
-		eye[0] += -r[0]*dx*scale + u[0]*dy*scale;
-		eye[1] += -r[1]*dx*scale + u[1]*dy*scale;
-		eye[2] += -r[2]*dx*scale + u[2]*dy*scale;
-
-		lookat[0] += -r[0]*dx*scale + u[0]*dy*scale;
-		lookat[1] += -r[1]*dx*scale + u[1]*dy*scale;
-		lookat[2] += -r[2]*dx*scale + u[2]*dy*scale;
+        // this piece of code is taken from this link: http://stackoverflow.com/questions/12832102/incorrect-3d-coordinates-from-2d-mouse-click-in-opengl
+        
+        glGetIntegerv(GL_VIEWPORT,viewport);
+        yC=viewport[3]-yC;
+        wy=yC;
+        glGetDoublev(GL_MODELVIEW_MATRIX,modelview);
+        glGetDoublev(GL_PROJECTION_MATRIX,projection);
+        glReadPixels(xC,yC,1,1,GL_DEPTH_COMPONENT,GL_FLOAT,&wz);
+        gluUnProject(wx,wy,wz,modelview,projection,viewport,&ox,&oy,&oz);
+            
+        fExt.vec[0] = x.vec[0] - ox;
+        fExt.vec[1] = x.vec[1] - oy;
+        fExt.vec[2] = x.vec[2] - oz;
+        dist = fExt.mod();
+        scaling = dist * extForceScaling;
+        fExt.normalize();
+        fExt = fExt.scalarMultiply(scaling);
+        
+//		// translate
+//		f[0] = lookat[0] - eye[0];
+//		f[1] = lookat[1] - eye[1];
+//		f[2] = lookat[2] - eye[2];
+//		u[0] = 0;
+//		u[1] = 1;
+//		u[2] = 0;
+//
+//		// scale the change by how far away we are
+//		scale = sqrt(length(f)) * 0.007;
+//
+//		crossproduct(f, u, r);
+//		crossproduct(r, f, u);
+//		normalize(r);
+//		normalize(u);
+//
+//		eye[0] += -r[0]*dx*scale + u[0]*dy*scale;
+//		eye[1] += -r[1]*dx*scale + u[1]*dy*scale;
+//		eye[2] += -r[2]*dx*scale + u[2]*dy*scale;
+//
+//		lookat[0] += -r[0]*dx*scale + u[0]*dy*scale;
+//		lookat[1] += -r[1]*dx*scale + u[1]*dy*scale;
+//		lookat[2] += -r[2]*dx*scale + u[2]*dy*scale;
 
 		break;
 
@@ -474,8 +524,8 @@ void myGlutMotion(int x, int y)
 	}
 
 
-	last_x = x;
-	last_y = y;
+	last_x = xC;
+	last_y = yC;
 
 	glutPostRedisplay();
 }
