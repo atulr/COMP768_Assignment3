@@ -32,6 +32,12 @@ void myVec3::normalize() {
 
 }
 
+void myVec3::reset(float x, float y, float z) {
+    vec[0] = x;
+    vec[1] = y;
+    vec[2] = z;
+}
+
 myVec3 myVec3::sub(myVec3 otherVec) {
     myVec3 temp;
     

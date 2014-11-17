@@ -205,6 +205,10 @@ void drawScene(){
         glVertex3f(0, 0, 1000);
     glEnd();
     
+    //update all UI variables here...
+    
+    dt = dtSpinner; mass = massSpinner; alpha = alphaSpinner;
+    beta = betaSpinner; 
     
 	if (live_draw_object)
 	{
@@ -260,10 +264,10 @@ void drawScene(){
         
 		glPopMatrix();
         
-//        if(enableIntegration)
-//            euler();
+        if(enableIntegration && live_simulation_type == 0)
+            euler();
 
-        if(enableIntegration)
+        if(enableIntegration && live_simulation_type == 1)
             eulerFeedback();
         
         glPushMatrix();
@@ -383,14 +387,26 @@ void myGlutMouse(int button, int state, int x, int y)
 		cur_button = button;
 	else
 	{
-		if (button == cur_button)
+		if (button == cur_button) {
+            fExt.vec[0] = 0.f;
+            fExt.vec[1] = 0.f;
+            fExt.vec[2] = 0.f;
 			cur_button = -1;
+        }
 	}
 
 	last_x = x;
 	last_y = y;
 }
 
+
+void reset() {
+    x.reset(5.f, 0.f, 0.f);
+    xDot.reset(0.f, 0.f, 0.f);
+    N.reset(0.f, 0.f, 0.f);
+    NDot.reset(0.f, 0.f, 0.f);
+    
+}
 
 // catch mouse move events
 void myGlutMotion(int xC, int yC)
@@ -419,15 +435,19 @@ void myGlutMotion(int xC, int yC)
         glGetDoublev(GL_MODELVIEW_MATRIX,modelview);
         glGetDoublev(GL_PROJECTION_MATRIX,projection);
         glReadPixels(xC,yC,1,1,GL_DEPTH_COMPONENT,GL_FLOAT,&wz);
-        gluUnProject(wx,wy,wz,modelview,projection,viewport,&ox,&oy,&oz);
-            
+        gluProject(x.vec[0], x.vec[1], x.vec[2], modelview, projection, viewport, &ox, &oy, &oz);
+//        gluUnProject(wx,wy,wz,modelview,projection,viewport,&ox,&oy,&oz);
+        
+        printf(" %d %d \n", xC, yC);
+        printf(" %f %f \n", ox, oy);
+        
         fExt.vec[0] = x.vec[0] - ox;
         fExt.vec[1] = x.vec[1] - oy;
         fExt.vec[2] = x.vec[2] - oz;
         dist = fExt.mod();
         scaling = dist * extForceScaling;
         fExt.normalize();
-        fExt = fExt.scalarMultiply(scaling);
+        fExt = fExt.scalarMultiply(forceScalingSpinner);
         
 //		// translate
 //		f[0] = lookat[0] - eye[0];
@@ -601,17 +621,9 @@ void glui_cb(int control)
 		else
 			glDisable(GL_DEPTH_TEST);
 		break;
-	case CB_ACTION_BUTTON:
-		if (step < 0)
-		{
-			step = 0;
-			action_button->set_name("Stop");
-		}
-		else
-		{
-			step = -1;
-			action_button->set_name("Start");
-		}
+	case CB_RESET_BUTTON:
+            reset();
+            enableIntegration = false;
 		break;
             
 	case CB_RESET:
@@ -663,13 +675,19 @@ void initGLUI(){
 	glui->add_statictext("");
     
 	// the object rollout
-	object_rollout = glui->add_rollout("Object");
+	object_rollout = glui->add_rollout("Simulation");
     
 	// the radio buttons
-	object_type_radio = glui->add_radiogroup_to_panel(object_rollout, &live_object_type);
-	glui->add_radiobutton_to_group(object_type_radio, "cube");
-	glui->add_radiobutton_to_group(object_type_radio, "sphere");
-	glui->add_radiobutton_to_group(object_type_radio, "torus");
+    simulationType = glui->add_radiogroup_to_panel(object_rollout, &live_simulation_type);
+    
+//	object_type_radio = glui->add_radiogroup_to_panel(object_rollout, &live_object_type);
+    glui->add_radiobutton_to_group(simulationType, "No Feedback");
+    glui->add_radiobutton_to_group(simulationType, "Feedback");
+//	glui->add_radiobutton_to_group(object_type_radio, "cube");
+//	glui->add_radiobutton_to_group(object_type_radio, "sphere");
+//	glui->add_radiobutton_to_group(object_type_radio, "torus");
+    
+    
     
    
 	// rotation and translation controls
@@ -697,16 +715,41 @@ void initGLUI(){
 	// the walk control
 	anim_rollout = glui->add_rollout("Animation");
     
-	action_button = glui->add_button_to_panel(anim_rollout, "Stop", CB_ACTION_BUTTON, glui_cb);
-  
+	reset_button = glui->add_button_to_panel(anim_rollout, "Reset", CB_RESET_BUTTON, glui_cb);
+
 	fire_button = glui->add_button_to_panel(anim_rollout, "Fire", CB_FIRE_BUTTON, glui_cb);
     
 	GLUI_Spinner *spin_s =
     
-    glui->add_spinner_to_panel(anim_rollout, "Speed", GLUI_SPINNER_FLOAT, &live_anim_speed);
+    glui->add_spinner_to_panel(anim_rollout, "dt", GLUI_SPINNER_FLOAT, &dtSpinner);
     
-	spin_s->set_float_limits(0.1, 10.0);
+	spin_s->set_float_limits(0.01, 1.0);
     
+    GLUI_Spinner *spin_mass = 
+
+    glui->add_spinner_to_panel(anim_rollout, "Mass", GLUI_SPINNER_FLOAT, &massSpinner);
+    
+    spin_mass->set_float_limits(0.1, 10.0);
+    
+    GLUI_Spinner *spin_alpha =
+    
+    glui->add_spinner_to_panel(anim_rollout, "Alpha", GLUI_SPINNER_FLOAT, &alphaSpinner);
+    
+    spin_alpha->set_float_limits(0.0, 1.0);
+
+    GLUI_Spinner *spin_beta =
+    
+    glui->add_spinner_to_panel(anim_rollout, "Beta", GLUI_SPINNER_FLOAT, &betaSpinner);
+    
+    spin_beta->set_float_limits(0.0, 1.0);
+    
+    GLUI_Spinner *spin_forcescaling =
+    
+    glui->add_spinner_to_panel(anim_rollout, "Force Scaling", GLUI_SPINNER_FLOAT, &forceScalingSpinner);
+    
+    spin_forcescaling->set_float_limits(1.0, 40.0);
+    
+
 	// our checkbox options for deciding what to draw
 	glui->add_checkbox("Draw Floor", &live_draw_floor);
 	glui->add_checkbox("Draw Object", &live_draw_object);

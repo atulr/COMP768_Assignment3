@@ -22,6 +22,7 @@
 #define CB_RESET 2
 #define TEX_CAPTURE 3
 #define CB_FIRE_BUTTON 4
+#define CB_RESET_BUTTON 5
 
 
 
@@ -76,12 +77,13 @@ int last_y;
 GLUI *glui;
 GLUI_Rollout		*object_rollout;
 GLUI_RadioGroup		*object_type_radio;
+GLUI_RadioGroup     *simulationType;
 GLUI_Rotation		*object_rotation;
 GLUI_Translation	*object_xz_trans;
 GLUI_Translation	*object_y_trans;
 
 GLUI_Rollout		*anim_rollout;
-GLUI_Button			*action_button;
+GLUI_Button			*reset_button;
 GLUI_Button         *fire_button;
 
 GLUI_Checkbox *draw_floor_check;
@@ -95,6 +97,11 @@ GLUI_Checkbox *use_depth_buffer;
 //
 GLfloat step = 0;
 GLfloat live_anim_speed = 3;
+GLfloat dtSpinner=0.01;
+GLfloat massSpinner = 0.1;
+GLfloat alphaSpinner = 0.f;
+GLfloat betaSpinner = 0.f;
+GLfloat forceScalingSpinner = 1.f;
 
 
 // live variables
@@ -108,6 +115,7 @@ int live_draw_floor;
 int live_draw_object;
 int live_use_depth_buffer;
 int live_texture_capture;
+int live_simulation_type;
 
 
 //////////////////////////////////////////////////////////////////////////

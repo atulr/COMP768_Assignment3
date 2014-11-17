@@ -32,6 +32,8 @@ public:
     
     float mod();
     
+    void reset(float x, float y, float z);
+    
 };
 
 #endif
